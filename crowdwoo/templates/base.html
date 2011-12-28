@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>the twitter lottery &mdash; crowdwoo</title>
+        <link rel="stylesheet" type="text/css" href="/static/css/base.css" />
+    </head>
+    <body>
+        
+        <div id="header">
+            <div class="float-left">
+                <h1>Crowdwoo</h1>
+                <h2>the twitter lottery</h2>
+            </div>
+            {% if session.user %}
+                <div id="session-info">
+                    <p style="background: url(http://api.twitter.com/1/users/profile_image/{{ session.user.twitter_handle }}.json?size=mini) no-repeat 0 0">Hi, {{ session.user.twitter_handle }}</p>
+                </div>
+            {% endif %}
+        </div>
+        <div id="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <div id="footer">
+            <p>&copy; 2011 crowdwoo.com &mdash; <a href="http://rycole.com">rycole.com</a></p>
+        </div>
+
+    </body>
+</html>

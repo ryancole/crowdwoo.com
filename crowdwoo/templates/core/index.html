@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div id="about-crowdwoo">
+        <h2>how this works</h2>
+        <p>Over the period of an entire month, those of us with a Twitter account may sign-in to Crowdwoo. At the end of the monthly period, three people will be selected as winners and everyone else will automatically follow those three people. The winners will bask in their newfound Twitter fame, with <span class="keyword">{{ user_count }}</span> new followers. There are no fees or hidden gotchas.</p>
+    </div>
+    <div id="join-crowdwoo">
+        <a href="{{ url_for('auth.signin') }}" class="awesome-button red">count me in</a>
+        <p>(will prompt for twitter sign-in)</p>
+    </div>
+    <div id="grats">
+        <h2>June winners have been chosen</h2>
+        <p>Congratulations to the winners for the month of June - <span class="keyword"><a href="http://twitter.com/Laksman">@Laksman</a></span>, <span class="keyword"><a href="http://twitter.com/CAdams105">@CAdams105</a></span> and <span class="keyword"><a href="http://twitter.com/caseymugar">@caseymugar</a></span>. Enjoy your newfound fame!</p>
+    </div>
+{% endblock %}

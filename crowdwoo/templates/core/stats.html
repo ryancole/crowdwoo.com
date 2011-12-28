@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div id="about-crowdwoo">
+        <h2>the low down</h2>
+        <p>There are currently <span class="keyword">{{ stats.user_count }}</span> other people in this month's Crowdwoo pool. They will all become your followers if you win. This monthly period ends in <span class="keyword">{{ stats.days_until.days }}</span> days, on <span class="keyword">{{ stats.last_day.strftime("%b %d, %Y") }}</span>.</p>
+        <p>Be sure to follow <span class="keyword"><a href="http://twitter.com/crowdwoo">@crowdwoo</a></span> if you want to be notified when the monthly winners are chosen. Also, Tweet about this to increase the number of potential followers that you may win!</p>
+    </div>
+    <div id="besocial">
+        <img src="/static/img/share.png" />
+        <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://crowdwoo.com" data-text="I just joined the Crowdwoo lottery and you should too! Win {{ stats.user_count }} new followers just for signing up!" data-count="horizontal" data-via="crowdwoo">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    </div>
+{% endblock %}

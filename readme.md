@@ -1,0 +1,1 @@
+This is my code for crowdwoo.com, a simple lottery for twitter followers. It uses python and flask to serve up the markup. It stored the data using mongodb. It uses Twitter's OAuth for user authentication.
